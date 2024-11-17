@@ -1,55 +1,33 @@
 <script>
-	import { Swiper } from 'stdf';
-	import Item from '$lib/components/product/Item.svelte';
-	import Item2 from '$lib/components/product/Item2.svelte';
-	import Item3 from '$lib/components/product/Item3.svelte';
-
-	/**
-	 * @typedef {Object} img
-	 * @property {'img'} type
-	 * @property {String} url image url
-	 */
-
-	/**
-	 * @typedef {Object} component
-	 * @property {'component'} type
-	 * @property {Object} component
-	 */
-
-	/**
-	 * Data
-	 * @type {Array<img|component>}
-	 * @default []
-	 */
-
-	const data = [
-		{
-			type: 'component',
-			component: Item
-		},
-		{
-			type: 'component',
-			component: Item2
-		},
-		{
-			type: 'component',
-			component: Item3
-		}
-	];
+	import Swiper from '$lib/components/Swiper.svelte';
+	import Swiper2 from '$lib/components/Swiper2.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="DermaSense" />
 </svelte:head>
+<main class="mx-4 space-y-8">
+	<div class="card-style my-5 h-screen rounded-xl bg-white">
+		<Swiper />
+	</div>
 
-<!-- <section> -->
-<Swiper {data} indicatePosition="none" autoplay={false} />
+	<div class="card-style my-5 h-64 rounded-xl bg-white px-4">
+		<h1>Keunggulan Sabun Dermasense</h1>
+		<hr />
+		<div class="grid grid-cols-2 grid-rows-2 gap-4">
+			<div>🌟 Mencerahkan Kulit:</div>
+			<div>🌿 Bahan Alami:</div>
+			<div>🛀 Scrub Lembut Alami</div>
+			<div>☕ Aroma Relaksasi</div>
+		</div>
+	</div>
 
-<!-- </section> -->
-<div class="rounded-xl">
-	<h2 class=" mx-2 my-2 text-lg font-semibold">Use Ai to Scan Your Face</h2>
-</div>
+	<div class="">
+		<Swiper2 />
+	</div>
+	<footer class="card-style h-40 rounded-xl bg-white">@Nurman Awaluddin Footer</footer>
+</main>
 
 <style>
 </style>

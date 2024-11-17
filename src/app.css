@@ -78,3 +78,8 @@ button:focus {
 	/* border: none; */
 	box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
 }
+
+.nav-card {
+	background-color: rgba(249, 249, 249, 0.98);
+	box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.06);
+}

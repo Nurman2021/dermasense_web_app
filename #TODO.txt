@@ -1,0 +1,10 @@
+#TODO-2
+1. selesaikan content home min 3: DONE
+2. pasang theme light/dark
+3. tambahkan clerk auth (optional)
+
+
+
+#TODO
+1. pasang swiperjs untuk load code svelte: DONE
+2. gunakan swiper stdf untuk load gambar saja DONE
