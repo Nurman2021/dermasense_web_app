@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>My Account</title>
+	<meta name="description" content="DermaSense" />
+</svelte:head>
 <main class="mx-4 space-y-8">
         <!-- Wrapper Profil -->
         <section class="bg-white card-style rounded-xl overflow-hidden w-full">
@@ -29,7 +33,7 @@
                     d="M16.88 3.549A9.933 9.933 0 0112 2c-5.523 0-10 4.477-10 10 0 2.89 1.231 5.522 3.182 7.394a9.932 9.932 0 005.364 2.448l.012.002a10.075 10.075 0 004.46-.748 10.075 10.075 0 004.436-2.692c.7-.7 1.3-1.5 1.75-2.364A9.96 9.96 0 0022 12a9.96 9.96 0 00-2.532-6.45z"
                   />
                 </svg>
-                <span>San Francisco, California</span>
+                <span>Makassar, Indonesia</span>
               </p>
               <p class="text-sm mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex
