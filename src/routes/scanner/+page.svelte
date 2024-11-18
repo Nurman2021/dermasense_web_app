@@ -1,14 +1,49 @@
+<script lang="ts">
+  import { onMount } from 'svelte';
+
+  let iframeData = null;
+
+  onMount(() => {
+    const handleMessage = (event) => {
+      // Validasi asal data (jika perlu)
+      if (event.origin === 'https://domain-iframe.com') {
+        const data = event.data;
+
+        // Periksa apakah data memiliki struktur {r: {...}}
+        if (data && data.r) {
+          iframeData = data.r; // Ambil hanya isi objek di dalam `r`
+          console.log('Data received from iframe:', iframeData);
+        }
+      }
+    };
+
+    // Tambahkan event listener
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      // Hapus event listener saat komponen dihancurkan
+      window.removeEventListener('message', handleMessage);
+    };
+  });
+</script>
+
 <svelte:head>
 	<title>My Skin</title>
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 <main class="mx-4 space-y-8">
+
       <!-- svelte-ignore a11y_missing_attribute -->
       <iframe 
-            src="https://cloud.email.cetaphil.com/skin-selfie.html" 
+      
+            src="https://skin-analyzer.vlcc.com/analysis" 
             class="w-full h-[500px] rounded-lg border-2 border-gray-300" 
             allowfullscreen allow="camera; microphone">
           </iframe>
+          <!-- url#1 =>https://cloud.email.cetaphil.com/skin-selfie.html -->
+          <!-- url#2 =>https://skin-analyzer.vlcc.com/analysis -->
+          <h1>Data dari iframe:</h1>
+          <pre>{JSON.stringify(iframeData, null, 2)}</pre>
     <div class="container mx-auto max-w-5xl px-6 mt-4">
       <!-- Header -->
       <div class="text-center mb-10">
