@@ -12,16 +12,16 @@
 	import 'swiper/css/scrollbar';
 </script>
 
+
 <Swiper
 	modules={[Navigation, Pagination, Scrollbar, A11y]}
 	spaceBetween={50}
 	slidesPerView={1}
-	navigation
 	on:slideChange={() => console.log('slide change')}
 	on:swiper={(e) => console.log(e.detail[0])}
 >
 	<SwiperSlide>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center min-h-screen card-style bg-white mt-5 rounded-xl">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_1.png"
@@ -39,7 +39,7 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="flex flex-col items-center space-y-4">
+		<div class="flex flex-col items-center min-h-screen card-style bg-white mt-5 rounded-xl">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_2.png"
@@ -57,7 +57,7 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="flex h-full flex-col items-center">
+		<div class="flex flex-col items-center min-h-screen card-style bg-white mt-5 rounded-xl">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_3.png"

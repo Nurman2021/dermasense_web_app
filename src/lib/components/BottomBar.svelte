@@ -13,13 +13,13 @@
 			text: 'My Skin',
 			icon: { name: 'ri-user-smile-line', size: 20 },
 			activeIcon: { name: 'ri-user-smile-line', size: 20 },
-			path: '/sverdle'
+			path: '/profile'
 		},
 		{
 			text: 'Account',
 			icon: { name: 'ri-account-circle-line', size: 20 },
 			activeIcon: { name: 'ri-account-circle-line', size: 20 },
-			path: '/about'
+			path: '/scanner'
 		}
 	];
 
