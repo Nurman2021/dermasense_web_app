@@ -74,14 +74,15 @@
 		</p>
 	  	  
 		<!-- Copyright -->
-		<p class="text-xs text-gray-400 mb-4">
+		 
+		<div class="text-xs text-gray-400 mb-4 border-y border-gray-300 py-4">
 		  Copyright © Enabled 2024. All Rights Reserved.
-		</p>
+		</div>
 	  
 		<!-- Link tambahan -->
 		<div class="text-xs text-gray-500 space-x-4">
 		  <a href="/" class="hover:text-pink-600">Privacy Policy</a>
-		  <a href="/" class="hover:text-pink-600">Terms and Conditions</a>
+		  <a href="/" class="hover:text-pink-600 border-x border-gray-300 px-4">Terms and Conditions</a>
 		  <a href="/" class="hover:text-pink-600">Back to Top</a>
 		</div>
 	  </div>
