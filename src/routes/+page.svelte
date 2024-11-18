@@ -1,7 +1,7 @@
 <script>
 	import Swiper from '$lib/components/Swiper.svelte';
 	import Swiper2 from '$lib/components/Swiper2.svelte';
-	import {Divider} from 'stdf';
+	import {Divider, Icon} from 'stdf';
 </script>
 
 <svelte:head>
@@ -49,32 +49,45 @@
 	  
 		<!-- Konten Teks -->
 		<div class="relative z-10 p-4">
-		  <h2 class="text-white text-lg font-bold">Scheduling</h2>
-		  <p class="text-gray-300 text-sm">Plan your day ahead of time.</p>
+		  <h2 class="text-white text-lg font-bold">Daily Routine</h2>
+		  <p class="text-gray-300 text-sm">Selesaikan Perawatan harian</p>
 		</div>
 	  
 		<!-- Ikon -->
 		<div class="absolute right-4 top-1/2 transform -translate-y-1/2">
-		  <div class="bg-green-500 rounded-full p-2">
-			<svg
-			  xmlns="http://www.w3.org/2000/svg"
-			  fill="none"
-			  viewBox="0 0 24 24"
-			  stroke-width="2"
-			  stroke="currentColor"
-			  class="text-white w-6 h-6"
-			>
-			  <path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="M8 7V3m8 4V3m-4 14h.01M4 11h16M10 21h4M12 11v10m-6-6h12"
-			  />
-			</svg>
+		  <div class="text-white rounded-full p-2">
+			<Icon name="ri-checkbox-multiple-fill" size={24}/>
 		  </div>
 		</div>
 	  </div>
 	  
-	<footer class="card-style h-40 rounded-xl bg-white">@Nurman Awaluddin Footer</footer>
+	<div class="bg-white card-style rounded-xl p-6 text-center w-full">
+		<!-- Header -->
+		<div class="mb-4">
+		  <h1 class="text-xl font-bold text-pink-600">DermaSense</h1>
+		  <p class="text-gray-500">Made with <span class="text-red-500">❤️</span> by Sikobe</p>
+		</div>
+	  
+		<!-- Deskripsi -->
+		<p class="text-sm text-gray-600 mb-6">
+		 Memberikan dukungan terbaik untuk Kulit Cerah Alami. Menemani berbagai Rutinitas
+		</p>
+	  	  
+		<!-- Copyright -->
+		<p class="text-xs text-gray-400 mb-4">
+		  Copyright © Enabled 2024. All Rights Reserved.
+		</p>
+	  
+		<!-- Link tambahan -->
+		<div class="text-xs text-gray-500 space-x-4">
+		  <a href="/" class="hover:text-pink-600">Privacy Policy</a>
+		  <a href="/" class="hover:text-pink-600">Terms and Conditions</a>
+		  <a href="/" class="hover:text-pink-600">Back to Top</a>
+		</div>
+	  </div>
+	  <footer class="h-12">@Nurman Awaluddin Footer</footer>
+
+	  
 </main>
 
 <style>
