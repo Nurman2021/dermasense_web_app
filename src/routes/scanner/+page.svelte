@@ -3,10 +3,11 @@
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 <main class="mx-4 space-y-8">
+      <!-- svelte-ignore a11y_missing_attribute -->
       <iframe 
-            src="https://www.perfectcorp.com/business/showcase/skincare/hd-diagnostics" 
+            src="https://cloud.email.cetaphil.com/skin-selfie.html" 
             class="w-full h-[500px] rounded-lg border-2 border-gray-300" 
-            allowfullscreen>
+            allowfullscreen allow="camera; microphone">
           </iframe>
     <div class="container mx-auto max-w-5xl px-6 mt-4">
       <!-- Header -->
