@@ -2,8 +2,13 @@
 	<title>My Skin</title>
 	<meta name="description" content="DermaSense" />
 </svelte:head>
-<main class="min-h-screen py-10">
-    <div class="container mx-auto max-w-5xl px-6">
+<main class="mx-4 space-y-8">
+      <iframe 
+            src="https://www.perfectcorp.com/business/showcase/skincare/hd-diagnostics" 
+            class="w-full h-[500px] rounded-lg border-2 border-gray-300" 
+            allowfullscreen>
+          </iframe>
+    <div class="container mx-auto max-w-5xl px-6 mt-4">
       <!-- Header -->
       <div class="text-center mb-10">
         <h1 class="text-4xl font-bold text-gray-800">Skin Analyze Scan</h1>
@@ -31,6 +36,10 @@
           </div>
         </div>
       </div>
+
+      
+          
+
   
       <!-- Hasil Analisis -->
       <div class="mt-10">
@@ -66,5 +75,7 @@
         </div>
       </div>
     </div>
+    <footer class="h-12">@Nurman Awaluddin Footer</footer>
+
 </main>
   
