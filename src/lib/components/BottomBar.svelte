@@ -23,14 +23,15 @@
 		}
 	];
 
-	let active = 0;
+	let active;
 
 	const tabBarChangeFun = (e) => {
 		active = e.detail;
+		console.log(active);
 		goto(labels4[active].path);
 	};
 </script>
 
 <div class="nav-card fixed bottom-0 z-10 w-full">
-	<TabBar labels={labels4} on:change={tabBarChangeFun} />
+	<TabBar labels={labels4} on:change={tabBarChangeFun} line={true} />
 </div>

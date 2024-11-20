@@ -10,13 +10,7 @@
 	import 'swiper/css/scrollbar';
 </script>
 
-<Swiper
-	modules={[Navigation, Pagination, Scrollbar, A11y]}
-	spaceBetween={20}
-	slidesPerView={2}
-	on:slideChange={() => console.log('slide change')}
-	on:swiper={(e) => console.log(e.detail[0])}
->
+<Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={20} slidesPerView={2}>
 	<SwiperSlide>
 		<div class="card-style flex h-96 flex-col items-center justify-center rounded-xl bg-white p-4">
 			<div>

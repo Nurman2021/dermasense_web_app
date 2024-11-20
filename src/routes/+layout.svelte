@@ -1,35 +1,67 @@
 <script>
 	import NavBottom from '$lib/components/BottomBar.svelte';
-	import Swiper from '$lib/components/Swiper.svelte';
-	import { Cell, NavBar, Icon, Popup } from 'stdf';
+	import { NavBar, Icon } from 'stdf';
+	import { goto, invalidateAll } from '$app/navigation';
 	import '../app.css';
 
-	let visible2 = false;
+	export let data;
+	let { supabase, session } = data;
+	$: ({ supabase, session } = data);
+
+	// session is null, if session is null we have no user. if its not null, we have a user
+
+	supabase.auth.onAuthStateChange(async (event, session) => {
+		if (event === 'SIGNED_IN') {
+			invalidateAll();
+		}
+
+		if (event === 'SIGNED_OUT') {
+			await goto('login');
+			invalidateAll();
+		}
+	});
 </script>
 
 <div class="bg-gray-100">
 	<div class="nav-card sticky top-0 z-10">
 		<NavBar titleSlot leftSlot rightSlot>
-			<div
+			<a
+				href="/"
 				slot="left"
 				class="m-2 h-8 w-8 rounded-full bg-white text-center leading-8 dark:bg-black/50"
 			>
 				<Icon name="ri-home-7-line" size={18} top={-2} />
-			</div>
+			</a>
 			<div
 				slot="title"
 				class="my-2 h-8 rounded-full bg-white px-3 text-sm leading-8 dark:bg-black/50"
 			>
-				Derma Sense
+				{#if session !== null}
+					<span class="btn btn-ghost">{session.user.email}</span>
+				{:else}
+					Dermasense
+				{/if}
 			</div>
 			<div
 				slot="right"
 				class="m-2 h-8 w-8 rounded-full bg-white text-center leading-8 dark:bg-black/50"
 			>
+				{#if session == null}
+					<button on:click={() => goto('/login')}>Login</button>
+				{:else}
+					<button
+						class="ml-2"
+						on:click={async () => {
+							await supabase.auth.signOut();
+						}}>Logout</button
+					>
+				{/if}
 				<Icon name="ri-sun-line" size={18} top={-2} />
 			</div>
 		</NavBar>
 	</div>
+
+	<!-- Navbar -->
 	<slot />
 	<NavBottom />
 </div>

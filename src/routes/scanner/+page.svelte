@@ -1,30 +1,4 @@
-<script lang="ts">
-  import { onMount } from 'svelte';
-
-  let iframeData = null;
-
-  onMount(() => {
-    const handleMessage = (event) => {
-      // Validasi asal data (jika perlu)
-      if (event.origin === 'https://domain-iframe.com') {
-        const data = event.data;
-
-        // Periksa apakah data memiliki struktur {r: {...}}
-        if (data && data.r) {
-          iframeData = data.r; // Ambil hanya isi objek di dalam `r`
-          console.log('Data received from iframe:', iframeData);
-        }
-      }
-    };
-
-    // Tambahkan event listener
-    window.addEventListener('message', handleMessage);
-
-    return () => {
-      // Hapus event listener saat komponen dihancurkan
-      window.removeEventListener('message', handleMessage);
-    };
-  });
+<script>
 </script>
 
 <svelte:head>
@@ -32,86 +6,105 @@
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 <main class="mx-4 space-y-8">
+	<!-- svelte-ignore a11y_missing_attribute -->
+	<!-- <iframe
+		src="https://skin-analyzer.vlcc.com/analysis"
+		class="h-[500px] w-full rounded-lg border-2 border-gray-300"
+		allowfullscreen
+		allow="camera; microphone"
+	>
+	</iframe> -->
+	<!-- url#1 =>https://cloud.email.cetaphil.com/skin-selfie.html -->
+	<!-- url#2 =>https://skin-analyzer.vlcc.com/analysis -->
+	<h1>Data dari iframe:</h1>
+	<div class="container mx-auto mt-4 max-w-5xl px-6">
+		<!-- Header -->
+		<div class="mb-10 text-center">
+			<h1 class="text-4xl font-bold text-gray-800">Skin Analyze Scan</h1>
+			<p class="mt-2 text-lg text-gray-600">
+				Get accurate insights about your skin condition by scanning or uploading your photo.
+			</p>
+		</div>
 
-      <!-- svelte-ignore a11y_missing_attribute -->
-      <iframe 
-      
-            src="https://skin-analyzer.vlcc.com/analysis" 
-            class="w-full h-[500px] rounded-lg border-2 border-gray-300" 
-            allowfullscreen allow="camera; microphone">
-          </iframe>
-          <!-- url#1 =>https://cloud.email.cetaphil.com/skin-selfie.html -->
-          <!-- url#2 =>https://skin-analyzer.vlcc.com/analysis -->
-          <h1>Data dari iframe:</h1>
-          <pre>{JSON.stringify(iframeData, null, 2)}</pre>
-    <div class="container mx-auto max-w-5xl px-6 mt-4">
-      <!-- Header -->
-      <div class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-gray-800">Skin Analyze Scan</h1>
-        <p class="text-gray-600 mt-2 text-lg">
-          Get accurate insights about your skin condition by scanning or uploading your photo.
-        </p>
-      </div>
-  
-      <!-- Area Scan -->
-      <div class="bg-white card-style rounded-xl p-8">
-        <div class="flex flex-col items-center space-y-6">
-          <!-- Tempat Gambar / Placeholder -->
-          <div class="w-64 h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-            <span class="text-gray-400 text-lg">Upload your photo</span>
-          </div>
-  
-          <!-- Tombol -->
-          <div class="flex space-x-4">
-            <button class="bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-600">
-              Upload Photo
-            </button>
-            <button class="bg-green-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-green-600">
-              Start Scan
-            </button>
-          </div>
-        </div>
-      </div>
+		<!-- Area Scan -->
+		<div class="card-style rounded-xl bg-white p-8">
+			<div class="flex flex-col items-center space-y-6">
+				<!-- Tempat Gambar / Placeholder -->
+				<div
+					class="flex h-64 w-64 items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-100"
+				>
+					<span class="text-lg text-gray-400">Upload your photo</span>
+				</div>
 
-      
-          
+				<!-- Tombol -->
+				<div class="flex space-x-4">
+					<button
+						class="bg-blue-500 hover:bg-blue-600 rounded-lg px-6 py-2 font-semibold text-white"
+					>
+						Upload Photo
+					</button>
+					<button
+						class="bg-green-500 hover:bg-green-600 rounded-lg px-6 py-2 font-semibold text-white"
+					>
+						Start Scan
+					</button>
+				</div>
+			</div>
+		</div>
 
-  
-      <!-- Hasil Analisis -->
-      <div class="mt-10">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Scan Results</h2>
-  
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Kartu Analisis -->
-          <div class="bg-white card-style rounded-xl p-6 flex items-start space-x-4">
-            <div class="bg-blue-100 text-blue-500 p-3 rounded-full">
-              <!-- Ikon -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11m4-4h4m-4 0l-4 4m0-4l4 4M3 14h6m4 0h11m-11 0l-4-4m0 4l4-4" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-800">Hydration Level</h3>
-              <p class="text-gray-600 text-sm mt-1">Your skin hydration is 85% optimal.</p>
-            </div>
-          </div>
-  
-          <!-- Kartu Analisis Lainnya -->
-          <div class="bg-white card-style rounded-xl p-6 flex items-start space-x-4">
-            <div class="bg-red-100 text-red-500 p-3 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11m4-4h4m-4 0l-4 4m0-4l4 4M3 14h6m4 0h11m-11 0l-4-4m0 4l4-4" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-800">Oiliness</h3>
-              <p class="text-gray-600 text-sm mt-1">Excess oil detected in T-zone.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="h-12">@Nurman Awaluddin Footer</footer>
+		<!-- Hasil Analisis -->
+		<div class="mt-10">
+			<h2 class="mb-6 text-2xl font-bold text-gray-800">Scan Results</h2>
 
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<!-- Kartu Analisis -->
+				<div class="card-style flex items-start space-x-4 rounded-xl bg-white p-6">
+					<div class="bg-blue-100 text-blue-500 rounded-full p-3">
+						<!-- Ikon -->
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 10h11m4-4h4m-4 0l-4 4m0-4l4 4M3 14h6m4 0h11m-11 0l-4-4m0 4l4-4"
+							/>
+						</svg>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold text-gray-800">Hydration Level</h3>
+						<p class="mt-1 text-sm text-gray-600">Your skin hydration is 85% optimal.</p>
+					</div>
+				</div>
+
+				<!-- Kartu Analisis Lainnya -->
+				<div class="card-style flex items-start space-x-4 rounded-xl bg-white p-6">
+					<div class="bg-red-100 text-red-500 rounded-full p-3">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 10h11m4-4h4m-4 0l-4 4m0-4l4 4M3 14h6m4 0h11m-11 0l-4-4m0 4l4-4"
+							/>
+						</svg>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold text-gray-800">Oiliness</h3>
+						<p class="mt-1 text-sm text-gray-600">Excess oil detected in T-zone.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="h-12">@Nurman Awaluddin Footer</footer>
 </main>
-  

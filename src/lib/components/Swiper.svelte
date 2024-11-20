@@ -12,16 +12,9 @@
 	import 'swiper/css/scrollbar';
 </script>
 
-
-<Swiper
-	modules={[Navigation, Pagination, Scrollbar, A11y]}
-	spaceBetween={50}
-	slidesPerView={1}
-	on:slideChange={() => console.log('slide change')}
-	on:swiper={(e) => console.log(e.detail[0])}
->
+<Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={50} slidesPerView={1}>
 	<SwiperSlide>
-		<div class="flex flex-col items-center card-style bg-white mt-5 rounded-xl">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_1.png"
@@ -29,27 +22,30 @@
 					style="width:300px"
 				/>
 			</div>
-			<div class="flex justify-between items-center w-full px-4 gap-4">
+			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class="space-y-4">
-					<h3 class="font-bold text-4xl">Koji Acid Dark Spot Remover</h3>
-					<p class="text-sm font-light mb-5">VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric</p>
+					<h3 class="text-4xl font-bold">Koji Acid Dark Spot Remover</h3>
+					<p class="mb-5 text-sm font-light">
+						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
+						Turmeric
+					</p>
 
 					<p>Share or Save for later</p>
 				</div>
 				<div>
-					<Icon name="ri-share-line" size={40}/>
+					<Icon name="ri-share-line" size={40} />
 				</div>
 			</div>
 			<div class="w-full">
 				<Divider px="4" />
 			</div>
-			<div class="w-full mb-4 font-bold">
+			<div class="mb-4 w-full font-bold">
 				<Button radius="xl">PESAN</Button>
 			</div>
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="flex flex-col items-center card-style bg-white mt-5 rounded-xl">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_2.png"
@@ -57,27 +53,30 @@
 					style="width:300px"
 				/>
 			</div>
-			<div class="flex justify-between items-center w-full px-4 gap-4">
-			<div class="space-y-4">
-				<h3 class="font-bold text-4xl">Koji Acid and Charcoal</h3>
-				<p class="text-sm font-light mb-5">VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric</p>
+			<div class="flex w-full items-center justify-between gap-4 px-4">
+				<div class="space-y-4">
+					<h3 class="text-4xl font-bold">Koji Acid and Charcoal</h3>
+					<p class="mb-5 text-sm font-light">
+						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
+						Turmeric
+					</p>
 
-				<p>Share or Save for later</p>
+					<p>Share or Save for later</p>
+				</div>
+				<div>
+					<Icon name="ri-share-line" size={40} />
+				</div>
 			</div>
-			<div>
-				<Icon name="ri-share-line" size={40}/>
-			</div>
-		</div>
 			<div class="w-full">
 				<Divider px="4" />
 			</div>
-			<div class="w-full mb-4 font-bold">
+			<div class="mb-4 w-full font-bold">
 				<Button radius="xl">PESAN</Button>
 			</div>
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="flex flex-col items-center card-style bg-white mt-5 rounded-xl">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_3.png"
@@ -85,21 +84,24 @@
 					style="width:300px"
 				/>
 			</div>
-			<div class="flex justify-between items-center w-full px-4 gap-4">
+			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class=" space-y-4">
-					<h3 class="font-bold text-4xl">Koji Brightening Lemon</h3>
-					<p class="text-sm font-light mb-5">VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen, Turmeric</p>
+					<h3 class="text-4xl font-bold">Koji Brightening Lemon</h3>
+					<p class="mb-5 text-sm font-light">
+						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
+						Turmeric
+					</p>
 
 					<p>Share or Save for later</p>
 				</div>
 				<div>
-					<Icon name="ri-share-line" size={40}/>
+					<Icon name="ri-share-line" size={40} />
 				</div>
 			</div>
 			<div class="w-full">
 				<Divider px="4" />
 			</div>
-			<div class="w-full mb-4 font-bold">
+			<div class="mb-4 w-full font-bold">
 				<Button radius="xl">PESAN</Button>
 			</div>
 		</div>
