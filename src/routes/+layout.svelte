@@ -23,7 +23,7 @@
 </script>
 
 <div class="bg-gray-100">
-	<div class="nav-card sticky top-0 z-10">
+	<!-- <div class="nav-card sticky top-0 z-10">
 		<NavBar titleSlot leftSlot rightSlot>
 			<a
 				href="/"
@@ -59,9 +59,9 @@
 				<Icon name="ri-sun-line" size={18} top={-2} />
 			</div>
 		</NavBar>
-	</div>
+	</div> -->
 
 	<!-- Navbar -->
 	<slot />
-	<NavBottom />
+	<!-- <NavBottom /> -->
 </div>
