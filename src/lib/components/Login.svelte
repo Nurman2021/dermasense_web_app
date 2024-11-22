@@ -1,5 +1,6 @@
 <script>
 	export let data;
+	export let useDark;
 	import { Auth } from '@supabase/auth-ui-svelte';
 	import { ThemeSupa } from '@supabase/auth-ui-shared';
 	import { goto } from '$app/navigation';
@@ -49,13 +50,13 @@
 	</div>
 {/if}
 
-<div class="min-h-screen p-4" style={splash ? 'display: none;' : 'display: block;'}>
+<div class="min-h-screen p-4 dark:bg-primaryBlack" style={splash ? 'display: none;' : 'display: block;'}>
 		<div class="flex flex-col mx-auto">
-			<p class="text-center">Create an account or login for <strong>Dermasense</strong></p>
+			<p class="text-center dark:text-darkWhite">Create an account or login for <strong>Dermasense</strong></p>
 			<!-- Supabase Auth UI -->
 			<Auth
 				supabaseClient={supabase}
-				theme="default"
+				theme={useDark ? 'dark' : 'light'}
 				appearance={{ theme: ThemeSupa }}
 			/>
 	</div>

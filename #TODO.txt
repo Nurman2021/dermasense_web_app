@@ -20,4 +20,4 @@
 3. add google calendar API feature on APP
 4. activated dark mode                      :DONE
 5. integrated profile page
-6. design 3 product mockup
+6. design 3 product mockup                  :DONE

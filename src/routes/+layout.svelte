@@ -42,7 +42,7 @@
 </script>
 
 {#if session == null}
-	<Login {data} />
+	<Login {data} useDark={darkMode} />
 {:else}
 	<div class="bg-primaryWhite dark:bg-darkBlack">
 		<div class="nav-card sticky top-0 z-10 dark:bg-darkBlack">

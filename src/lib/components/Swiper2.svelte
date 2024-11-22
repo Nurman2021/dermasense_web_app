@@ -1,16 +1,17 @@
 <script>
 	// import Swiper core and required modules
-	import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+	import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
 
 	// Import Swiper styles
 	import 'swiper/css';
 	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
 	import 'swiper/css/scrollbar';
 </script>
 
-<Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={20} slidesPerView={2}>
+<Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} spaceBetween={20} slidesPerView={2} autoplay={{
+    delay: 2500,
+}}>
 	<SwiperSlide>
 		<div class="card-style flex h-96 flex-col items-center justify-center rounded-xl bg-white p-4 dark:bg-gray-800 dark:text-white">
 			<div>
