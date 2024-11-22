@@ -14,7 +14,7 @@
 
 <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={50} slidesPerView={1}>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_1.png"
@@ -45,7 +45,7 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_2.png"
@@ -76,7 +76,7 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
 					src="/images/placeholder/placeholder_3.png"

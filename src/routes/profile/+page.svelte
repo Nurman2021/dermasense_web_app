@@ -4,7 +4,7 @@
 </svelte:head>
 <main class="mx-4 space-y-8">
         <!-- Wrapper Profil -->
-        <section class="bg-white card-style rounded-xl overflow-hidden w-full">
+        <section class="bg-white dark:bg-gray-800 card-style rounded-xl overflow-hidden w-full">
           <!-- Gambar Latar Belakang -->
           <div class="relative">
             <img
@@ -13,10 +13,10 @@
               class="w-full h-[50vh] object-cover"
             />
             <!-- Efek Gradasi -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-gray-800"></div>
       
             <!-- Informasi Pengguna -->
-            <div class="absolute bottom-4 left-6 text-black z-10">
+            <div class="absolute bottom-4 left-6 text-black dark:text-white z-10">
               <h1 class="text-2xl font-bold">Fety <br> Puja Amelia</h1>
               <p class="text-sm flex items-center space-x-2">
                 <svg
@@ -43,7 +43,7 @@
           </div>
       
           <!-- Statistik Profil -->
-          <div class="flex justify-around py-4 bg-gray-50">
+          <div class="flex justify-around py-4 bg-gray-50 dark:bg-dark-50">
             <div class="text-center">
               <h2 class="text-xl font-bold">351</h2>
               <p class="text-sm text-gray-500">Followers</p>
@@ -69,11 +69,11 @@
           </div>
         </section>
 
-        <div class="bg-white py-10 card-style rounded-xl">
+        <div class="bg-white dark:bg-gray-800 py-10 card-style rounded-xl">
             <div class="px-6">
               <!-- Judul Section -->
               <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800">Skin Analysis Points</h2>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-darkWhite">Skin Analysis Points</h2>
                 <p class="text-gray-600 mt-2">
                   Discover detailed insights about your skin condition.
                 </p>

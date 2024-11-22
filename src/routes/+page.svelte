@@ -11,10 +11,10 @@
 <main class="mx-4 space-y-8">
 	<Swiper />
 
-	<div class="card-style my-5 flex flex-col justify-center rounded-xl bg-white p-4">
+	<div class="card-style my-5 flex flex-col justify-center rounded-xl bg-white dark:bg-gray-800 dark:text-white p-4">
 		<div>
 			<h1 class="text-center text-2xl font-bold">Keunggulan Sabun Dermasense</h1>
-			<p class="text-center text-sm text-gray-600">
+			<p class="text-center text-sm text-gray-600 dark:text-gray-300">
 				Kami percaya bahan alami lebih baik untuk kulit
 			</p>
 			<Divider px="4" />
@@ -23,21 +23,21 @@
 					<h2 class="text-xl font-bold">
 						<span class="text-4xl">🌟</span><br /> Mencerahkan Kulit
 					</h2>
-					<p class="text-sm text-gray-600">Mengurangi noda hitam dan kulit kusam</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">Mengurangi noda hitam dan kulit kusam</p>
 				</div>
 				<div>
 					<h2 class="text-xl font-bold"><span class="text-4xl">🌿</span><br /> Bahan Alami</h2>
-					<p class="text-sm text-gray-600">Tanpa bahan kimia keras, aman untuk kulit sensitif</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">Tanpa bahan kimia keras, aman untuk kulit sensitif</p>
 				</div>
 				<div class="p-4">
 					<h2 class="text-xl font-bold">
 						<span class="text-4xl">🛀</span> <br /> Scrub Lembut Alami
 					</h2>
-					<p class="text-sm text-gray-600">Mengangkat sel kulit mati</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">Mengangkat sel kulit mati</p>
 				</div>
 				<div class="p-4">
 					<h2 class="text-xl font-bold"><span class="text-4xl">☕</span> <br /> Aroma Relaksasi</h2>
-					<p class="text-sm text-gray-600">Memberikan Kesegaran dengan wangi kopi Alami</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">Memberikan Kesegaran dengan wangi kopi Alami</p>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 		<img
 			src="/images/makeup.jpg"
 			alt="Background"
-			class="absolute inset-0 h-full w-full object-cover opacity-50"
+			class="absolute inset-0 h-full w-full object-cover opacity-50 dark:opacity-25"
 		/>
 
 		<!-- Konten Teks -->
@@ -67,28 +67,28 @@
 		</div>
 	</div>
 
-	<div class="card-style w-full rounded-xl bg-white p-6 text-center">
+	<div class="card-style w-full rounded-xl bg-white dark:bg-gray-800 p-6 text-center">
 		<!-- Header -->
 		<div class="mb-4">
-			<h1 class="text-pink-600 text-xl font-bold">DermaSense</h1>
-			<p class="text-gray-500">Made with <span class="text-red-500">❤️</span> by Sikobe</p>
+			<h1 class="text-pink-600 text-xl font-bold dark:text-white">DermaSense</h1>
+			<p class="text-gray-500 dark:text-gray-200">Made with <span class="text-red-500">❤️</span> by Sikobe</p>
 		</div>
 
 		<!-- Deskripsi -->
-		<p class="mb-6 text-sm text-gray-600">
+		<p class="mb-6 text-sm text-gray-600 dark:text-gray-300">
 			Memberikan dukungan terbaik untuk Kulit Cerah Alami. Menemani berbagai Rutinitas
 		</p>
 
 		<!-- Copyright -->
 
-		<div class="mb-4 border-y border-gray-100 py-4 text-xs text-gray-400">
+		<div class="mb-4 border-y border-gray-100 dark:border-gray-400 py-4 text-xs text-gray-400">
 			Copyright © Enabled 2024. All Rights Reserved.
 		</div>
 
 		<!-- Link tambahan -->
 		<div class="space-x-4 text-xs text-gray-500">
 			<a href="/" class="hover:text-pink-600">Privacy Policy</a>
-			<a href="/" class="hover:text-pink-600 border-x border-gray-100 px-4">Terms and Conditions</a>
+			<a href="/" class="hover:text-pink-600 border-x border-gray-100 dark:border-gray-400 px-4">Terms and Conditions</a>
 			<a href="/" class="hover:text-pink-600">Back to Top</a>
 		</div>
 	</div>

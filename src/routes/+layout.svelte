@@ -3,6 +3,7 @@
 	import Login from '$lib/components/Login.svelte';
 	import { NavBar, Icon } from 'stdf';
 	import { goto, invalidateAll } from '$app/navigation';
+	import { browser } from '$app/environment';
 	import '../app.css';
 
 	export let data;
@@ -19,24 +20,43 @@
 			invalidateAll();
 		}
 	});
+
+	let darkMode = false;
+    function handleSwitchDarkMode() {
+        darkMode = !darkMode;
+
+        darkMode
+            ? document.documentElement.classList.add('dark')
+            : document.documentElement.classList.remove('dark');
+    }
+
+    if (browser) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+            darkMode = true;
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkMode = false;
+        }
+    }
 </script>
 
 {#if session == null}
 	<Login {data} />
 {:else}
-	<div class="bg-gray-100">
-		<div class="nav-card sticky top-0 z-10">
+	<div class="bg-primaryWhite dark:bg-darkBlack">
+		<div class="nav-card sticky top-0 z-10 dark:bg-darkBlack">
 			<NavBar titleSlot leftSlot rightSlot>
 				<a
 					href="/"
 					slot="left"
-					class="m-2 h-8 w-8 rounded-full bg-white text-center leading-8 dark:bg-black/50"
+					class="m-2 h-8 w-8 dark:text-primary-100 text-center leading-8"
 				>
 					<Icon name="ri-home-7-line" size={18} top={-2} />
 				</a>
 				<div
 					slot="title"
-					class="my-2 h-8 rounded-full bg-white px-3 text-sm leading-8 dark:bg-black/50"
+					class="my-2 h-8 px-3 text-sm dark:text-primary-100 leading-8"
 				>
 					{#if session !== null}
 						<span class="btn btn-ghost">{session.user.email}</span>
@@ -46,7 +66,7 @@
 				</div>
 				<div
 					slot="right"
-					class="m-2 h-8 w-8 rounded-full bg-white text-center leading-8 dark:bg-black/50"
+					class="m-2 text-center dark:text-primary-100 leading-8 space-x-3"
 				>
 					<button
 						class="ml-2"
@@ -54,7 +74,9 @@
 							await supabase.auth.signOut();
 						}}>Logout</button
 					>
-					<Icon name="ri-sun-line" size={18} top={-2} />
+					<button on:click={handleSwitchDarkMode}>
+						<Icon name={darkMode? 'ri-moon-line' :'ri-sun-line'} size={18} top={-2} />
+					</button>
 				</div>
 			</NavBar>
 		</div>

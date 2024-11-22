@@ -11,5 +11,13 @@
 
 
 #TODO-3
-1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home.
-2. buat page utama splash
+1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home. DONE
+2. buat page utama splash DONE
+
+#TODO-4
+1. buat third party auth GOOGLE
+2. custom UI LOGIN page
+3. add google calendar API feature on APP
+4. activated dark mode 
+5. integrated profile page
+6. design 3 product mockup
