@@ -14,6 +14,8 @@
 	$: if (session) {
 		goto('/');
 	}
+
+	
 </script>
 
 {#if splash}
@@ -47,21 +49,14 @@
 	</div>
 {/if}
 
-<div class="min-h-screen" style={splash ? 'display: none;' : 'display: block;'}>
-	<div class="w-full">
-		<div class="flex flex-col">
-			<p>Create an account or login below!</p>
+<div class="min-h-screen p-4" style={splash ? 'display: none;' : 'display: block;'}>
+		<div class="flex flex-col mx-auto">
+			<p class="text-center">Create an account or login for <strong>Dermasense</strong></p>
 			<!-- Supabase Auth UI -->
 			<Auth
 				supabaseClient={supabase}
-				theme="light"
-				appearance={{
-					theme: ThemeSupa,
-					style: {
-						input: 'width: 500px;'
-					}
-				}}
+				theme="default"
+				appearance={{ theme: ThemeSupa }}
 			/>
-		</div>
 	</div>
 </div>

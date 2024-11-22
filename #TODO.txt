@@ -16,8 +16,8 @@
 
 #TODO-4
 1. buat third party auth GOOGLE
-2. custom UI LOGIN page
+2. custom UI LOGIN page                     :DONE
 3. add google calendar API feature on APP
-4. activated dark mode 
+4. activated dark mode                      :DONE
 5. integrated profile page
 6. design 3 product mockup
