@@ -15,9 +15,9 @@
 2. buat page utama splash DONE
 
 #TODO-4
-1. buat third party auth GOOGLE
+1. buat third party auth GOOGLE             :DONE
 2. custom UI LOGIN page                     :DONE
-3. add google calendar API feature on APP
+3. add google calendar API feature on APP   :DONE
 4. activated dark mode                      :DONE
 5. integrated profile page
 6. design 3 product mockup                  :DONE

@@ -60,6 +60,7 @@
 				 supabaseClient={supabase}
 				 theme={useDark ? 'dark' : 'light'}
 				 appearance={{ theme: ThemeSupa }}
+				 providers={['google']}
 				 />
 			</div>
 	</div>
