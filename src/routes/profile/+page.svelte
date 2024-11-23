@@ -1,3 +1,12 @@
+<script>
+  import { onMount } from 'svelte';
+  export let data;
+  
+  let profile = {};
+  onMount(async()=>{
+    profile = await data.session.user.identities[0].identity_data;
+  })
+</script>
 <svelte:head>
 	<title>My Account</title>
 	<meta name="description" content="DermaSense" />
@@ -8,7 +17,7 @@
           <!-- Gambar Latar Belakang -->
           <div class="relative">
             <img
-              src="/images/puja-amelia.jpg"
+              src={profile.avatar_url}
               alt="Profile Background"
               class="w-full h-[50vh] object-cover"
             />
@@ -17,7 +26,7 @@
       
             <!-- Informasi Pengguna -->
             <div class="absolute bottom-4 left-6 text-black dark:text-white z-10">
-              <h1 class="text-2xl font-bold">Fety <br> Puja Amelia</h1>
+              <h1 class="text-2xl font-bold">{profile.full_name}</h1>
               <p class="text-sm flex items-center space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +42,7 @@
                     d="M16.88 3.549A9.933 9.933 0 0112 2c-5.523 0-10 4.477-10 10 0 2.89 1.231 5.522 3.182 7.394a9.932 9.932 0 005.364 2.448l.012.002a10.075 10.075 0 004.46-.748 10.075 10.075 0 004.436-2.692c.7-.7 1.3-1.5 1.75-2.364A9.96 9.96 0 0022 12a9.96 9.96 0 00-2.532-6.45z"
                   />
                 </svg>
-                <span>Makassar, Indonesia</span>
+                <span>{profile.email}</span>
               </p>
               <p class="text-sm mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex

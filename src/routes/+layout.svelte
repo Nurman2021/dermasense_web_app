@@ -2,7 +2,7 @@
 	import NavBottom from '$lib/components/BottomBar.svelte';
 	import Login from '$lib/components/Login.svelte';
 	import { NavBar, Icon } from 'stdf';
-	import { goto, invalidateAll } from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import '../app.css';
 
