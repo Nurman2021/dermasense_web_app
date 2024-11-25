@@ -1,4 +1,4 @@
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from "$env/dynamic/public";
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$lib/Env.js';
 import { createBrowserClient, isBrowser, parse } from "@supabase/ssr"
 import type { LayoutLoad } from "./$types"
 
