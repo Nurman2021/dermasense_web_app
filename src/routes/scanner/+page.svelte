@@ -7,13 +7,13 @@
 </svelte:head>
 <main class="mx-4 space-y-8">
 	<!-- svelte-ignore a11y_missing_attribute -->
-	<!-- <iframe
+	<iframe
 		src="https://skin-analyzer.vlcc.com/analysis"
 		class="h-[500px] w-full rounded-lg border-2 border-gray-300"
 		allowfullscreen
 		allow="camera; microphone"
 	>
-	</iframe> -->
+	</iframe>
 	<!-- url#1 =>https://cloud.email.cetaphil.com/skin-selfie.html -->
 	<!-- url#2 =>https://skin-analyzer.vlcc.com/analysis -->
 	<h1>Data dari iframe:</h1>

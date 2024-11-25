@@ -21,3 +21,12 @@
 4. activated dark mode                      :DONE
 5. integrated profile page                  :DONE
 6. design 3 product mockup                  :DONE
+
+
+
+#TODO-5 
+1. upload web ke VERCEL
+2, connect versel dengan DOMAIN
+3. cari solusi scan muka agar tampil di halaman
+5. generate qr code untuk urlnya                    :DONE
+6. tambahkan mockup sabun batangan pada design
