@@ -33,5 +33,5 @@
 </script>
 
 <div class="nav-card fixed bottom-0 z-10 w-full">
-	<TabBar labels={labels4} on:change={tabBarChangeFun} line={true} />
+	<TabBar labels={labels4} on:change={tabBarChangeFun} line={true} injClass="dark:bg-[#090C00]" />
 </div>

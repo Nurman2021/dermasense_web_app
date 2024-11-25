@@ -1,23 +1,32 @@
+<script>
+  import { onMount } from 'svelte';
+  export let data;
+  
+  let profile = {};
+  onMount(async()=>{
+    profile = await data.session.user.identities[0].identity_data;
+  })
+</script>
 <svelte:head>
 	<title>My Account</title>
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 <main class="mx-4 space-y-8">
         <!-- Wrapper Profil -->
-        <section class="bg-white card-style rounded-xl overflow-hidden w-full">
+        <section class="bg-white dark:bg-gray-800 card-style rounded-xl overflow-hidden w-full">
           <!-- Gambar Latar Belakang -->
           <div class="relative">
             <img
-              src="/images/puja-amelia.jpg"
+              src={profile.avatar_url}
               alt="Profile Background"
               class="w-full h-[50vh] object-cover"
             />
             <!-- Efek Gradasi -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-gray-800"></div>
       
             <!-- Informasi Pengguna -->
-            <div class="absolute bottom-4 left-6 text-black z-10">
-              <h1 class="text-2xl font-bold">Fety <br> Puja Amelia</h1>
+            <div class="absolute bottom-4 left-6 text-black dark:text-white z-10">
+              <h1 class="text-2xl font-bold">{profile.full_name}</h1>
               <p class="text-sm flex items-center space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +42,7 @@
                     d="M16.88 3.549A9.933 9.933 0 0112 2c-5.523 0-10 4.477-10 10 0 2.89 1.231 5.522 3.182 7.394a9.932 9.932 0 005.364 2.448l.012.002a10.075 10.075 0 004.46-.748 10.075 10.075 0 004.436-2.692c.7-.7 1.3-1.5 1.75-2.364A9.96 9.96 0 0022 12a9.96 9.96 0 00-2.532-6.45z"
                   />
                 </svg>
-                <span>Makassar, Indonesia</span>
+                <span>{profile.email}</span>
               </p>
               <p class="text-sm mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex
@@ -43,7 +52,7 @@
           </div>
       
           <!-- Statistik Profil -->
-          <div class="flex justify-around py-4 bg-gray-50">
+          <div class="flex justify-around py-4 bg-gray-50 dark:bg-dark-50">
             <div class="text-center">
               <h2 class="text-xl font-bold">351</h2>
               <p class="text-sm text-gray-500">Followers</p>
@@ -69,11 +78,11 @@
           </div>
         </section>
 
-        <div class="bg-white py-10 card-style rounded-xl">
+        <div class="bg-white dark:bg-gray-800 py-10 card-style rounded-xl">
             <div class="px-6">
               <!-- Judul Section -->
               <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800">Skin Analysis Points</h2>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-darkWhite">Skin Analysis Points</h2>
                 <p class="text-gray-600 mt-2">
                   Discover detailed insights about your skin condition.
                 </p>

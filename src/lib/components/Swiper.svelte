@@ -1,6 +1,6 @@
 <script>
 	// import Swiper core and required modules
-	import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+	import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 	import { Divider, Button, Icon } from 'stdf';
 
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
@@ -8,23 +8,25 @@
 	// Import Swiper styles
 	import 'swiper/css';
 	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
 	import 'swiper/css/scrollbar';
+	import 'swiper/css/autoplay'
 </script>
 
-<Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={50} slidesPerView={1}>
+<Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} spaceBetween={50} slidesPerView={1} autoplay={{
+    delay: 2500,
+}}>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
-					src="/images/placeholder/placeholder_1.png"
+					src="/images/product/aromaterapi.png"
 					alt="image content"
-					style="width:300px"
+					style="width:400px"
 				/>
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class="space-y-4">
-					<h3 class="text-4xl font-bold">Koji Acid Dark Spot Remover</h3>
+					<h3 class="text-4xl font-bold">Aromaterapi</h3>
 					<p class="mb-5 text-sm font-light">
 						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
 						Turmeric
@@ -45,17 +47,17 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
-					src="/images/placeholder/placeholder_2.png"
+					src="/images/product/eksfoliasi.png"
 					alt="image content"
-					style="width:300px"
+					style="width:400px"
 				/>
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class="space-y-4">
-					<h3 class="text-4xl font-bold">Koji Acid and Charcoal</h3>
+					<h3 class="text-4xl font-bold">Eksfoliasi</h3>
 					<p class="mb-5 text-sm font-light">
 						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
 						Turmeric
@@ -76,17 +78,17 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white">
+		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
 			<div>
 				<image
-					src="/images/placeholder/placeholder_3.png"
+					src="/images/product/minyak-esensial.png"
 					alt="image content"
-					style="width:300px"
+					style="width:400px"
 				/>
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class=" space-y-4">
-					<h3 class="text-4xl font-bold">Koji Brightening Lemon</h3>
+					<h3 class="text-4xl font-bold">Minyak Esensial</h3>
 					<p class="mb-5 text-sm font-light">
 						VALITIC Kojic Acid Dark Spot Remover Soap Bars with Vitamin C, Retinol, Collagen,
 						Turmeric

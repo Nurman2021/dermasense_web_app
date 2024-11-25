@@ -11,5 +11,22 @@
 
 
 #TODO-3
-1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home.
-2. buat page utama splash
+1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home. DONE
+2. buat page utama splash DONE
+
+#TODO-4
+1. buat third party auth GOOGLE             :DONE
+2. custom UI LOGIN page                     :DONE
+3. add google calendar API feature on APP   :DONE
+4. activated dark mode                      :DONE
+5. integrated profile page                  :DONE
+6. design 3 product mockup                  :DONE
+
+
+
+#TODO-5 
+1. upload web ke VERCEL
+2, connect versel dengan DOMAIN
+3. cari solusi scan muka agar tampil di halaman
+5. generate qr code untuk urlnya                    :DONE
+6. tambahkan mockup sabun batangan pada design
