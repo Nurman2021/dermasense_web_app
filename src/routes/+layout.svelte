@@ -2,7 +2,7 @@
 	import NavBottom from '$lib/components/BottomBar.svelte';
 	import Login from '$lib/components/Login.svelte';
 	import { NavBar, Icon } from 'stdf';
-	import { goto, invalidateAll } from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
 	import '../app.css';
 
 	export let data;
@@ -15,7 +15,6 @@
 		}
 
 		if (event === 'SIGNED_OUT') {
-			await goto('login');
 			invalidateAll();
 		}
 	});
