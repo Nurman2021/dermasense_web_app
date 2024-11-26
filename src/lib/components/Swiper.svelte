@@ -9,20 +9,23 @@
 	import 'swiper/css';
 	import 'swiper/css/navigation';
 	import 'swiper/css/scrollbar';
-	import 'swiper/css/autoplay'
+	import 'swiper/css/autoplay';
 </script>
 
-<Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} spaceBetween={50} slidesPerView={1} autoplay={{
-    delay: 2500,
-}}>
+<Swiper
+	modules={[Navigation, Scrollbar, A11y, Autoplay]}
+	spaceBetween={50}
+	slidesPerView={1}
+	autoplay={{
+		delay: 2500
+	}}
+>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
+		<div
+			class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white"
+		>
 			<div>
-				<image
-					src="/images/product/aromaterapi.png"
-					alt="image content"
-					style="width:400px"
-				/>
+				<image src="/images/product/mockup_2.png" alt="image content" style="width:400px" />
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class="space-y-4">
@@ -47,13 +50,11 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
+		<div
+			class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white"
+		>
 			<div>
-				<image
-					src="/images/product/eksfoliasi.png"
-					alt="image content"
-					style="width:400px"
-				/>
+				<image src="/images/product/mockup_1.png" alt="image content" style="width:400px" />
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class="space-y-4">
@@ -78,13 +79,11 @@
 		</div>
 	</SwiperSlide>
 	<SwiperSlide>
-		<div class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white">
+		<div
+			class="card-style mt-5 flex flex-col items-center rounded-xl bg-white dark:bg-gray-800 dark:text-white"
+		>
 			<div>
-				<image
-					src="/images/product/minyak-esensial.png"
-					alt="image content"
-					style="width:400px"
-				/>
+				<image src="/images/product/mockup_3.png" alt="image content" style="width:400px" />
 			</div>
 			<div class="flex w-full items-center justify-between gap-4 px-4">
 				<div class=" space-y-4">
