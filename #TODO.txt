@@ -25,8 +25,8 @@
 
 
 #TODO-5 
-1. upload web ke VERCEL
-2, connect versel dengan DOMAIN
+1. upload web ke VERCEL                             :DONE
+2, connect versel dengan DOMAIN                     :DONE
 3. cari solusi scan muka agar tampil di halaman
 5. generate qr code untuk urlnya                    :DONE
 6. tambahkan mockup sabun batangan pada design
