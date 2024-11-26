@@ -34,10 +34,10 @@
 
 #TODO-5
 1. publish GOOGLE OAUTH
-2. publish supabasse
+2. publish supabasse                                :DONE
 3. make reminder component for dermasense
 4. add calendar COMPONENT dermasense
-5. add LOTION product to main page
+5. add LOTION product to main page                  :DONE
 6. CATCH console.log using PUPPETEER or PLAYWRIGHT  :DONE (ganti url iframe)
 
 
