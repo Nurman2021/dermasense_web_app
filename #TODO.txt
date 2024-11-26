@@ -27,6 +27,18 @@
 #TODO-5 
 1. upload web ke VERCEL                             :DONE
 2, connect versel dengan DOMAIN                     :DONE
-3. cari solusi scan muka agar tampil di halaman
+3. cari solusi scan muka agar tampil di halaman     :DONE (use puppeteer / playwright)
 5. generate qr code untuk urlnya                    :DONE
-6. tambahkan mockup sabun batangan pada design
+6. tambahkan mockup sabun batangan pada design      :DONE
+
+
+#TODO-5
+1. publish GOOGLE OAUTH
+2. publish supabasse
+3. make reminder component for dermasense
+4. add calendar COMPONENT dermasense
+5. add LOTION product to main page
+6. CATCH console.log using PUPPETEER or PLAYWRIGHT  :DONE (ganti url iframe)
+
+
+EUROPA FONT
