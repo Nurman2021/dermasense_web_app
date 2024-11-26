@@ -3,6 +3,7 @@
 	import Login from '$lib/components/Login.svelte';
 	import { NavBar, Icon } from 'stdf';
 	import { invalidateAll } from '$app/navigation';
+	import { browser } from '$app/environment';
 	import '../app.css';
 
 	export let data;
