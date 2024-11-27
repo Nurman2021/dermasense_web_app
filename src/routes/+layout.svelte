@@ -48,34 +48,32 @@
 {#if session == null}
 	<Login {data} useDark={darkMode} />
 {:else}
-	<div class="bg-primaryWhite dark:bg-darkBlack">
-		<div class="nav-card sticky top-0 z-10 dark:bg-darkBlack">
-			<NavBar titleSlot leftSlot rightSlot>
-				<a href="/" slot="left" class="m-2 h-8 w-8 text-center leading-8 dark:text-primary-100">
-					<Icon name="ri-home-7-line" size={18} top={-2} />
-				</a>
-				<div slot="title" class="my-2 h-8 px-3 text-sm leading-8 dark:text-primary-100">
-					{#if session !== null}
-						<span class="btn btn-ghost">{session.user.email}</span>
-					{:else}
-						Dermasense
-					{/if}
-				</div>
-				<div slot="right" class="m-2 space-x-3 text-center leading-8 dark:text-primary-100">
-					<button
-						class="ml-2"
-						on:click={async () => {
-							await supabase.auth.signOut();
-						}}>Logout</button
-					>
-					<button on:click={handleSwitchDarkMode}>
-						<Icon name={darkMode ? 'ri-moon-line' : 'ri-sun-line'} size={18} top={-2} />
-					</button>
-				</div>
-			</NavBar>
-		</div>
-
-		<slot />
-		<NavBottom />
+	<div class="nav-card sticky top-0 z-10 dark:bg-darkBlack">
+		<NavBar titleSlot leftSlot rightSlot>
+			<a href="/" slot="left" class="m-2 h-8 w-8 text-center leading-8 dark:text-primary-100">
+				<Icon name="ri-home-7-line" size={18} top={-2} />
+			</a>
+			<div slot="title" class="my-2 h-8 px-3 text-sm leading-8 dark:text-primary-100">
+				{#if session !== null}
+					<span class="btn btn-ghost">{session.user.email}</span>
+				{:else}
+					Dermasense
+				{/if}
+			</div>
+			<div slot="right" class="m-2 space-x-3 text-center leading-8 dark:text-primary-100">
+				<button
+					class="ml-2"
+					on:click={async () => {
+						await supabase.auth.signOut();
+					}}>Logout</button
+				>
+				<button on:click={handleSwitchDarkMode}>
+					<Icon name={darkMode ? 'ri-moon-line' : 'ri-sun-line'} size={18} top={-2} />
+				</button>
+			</div>
+		</NavBar>
 	</div>
+
+	<slot />
+	<NavBottom />
 {/if}
