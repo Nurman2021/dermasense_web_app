@@ -45,6 +45,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Dermasense</title>
+	<meta name="description" content="DermaSense" />
+</svelte:head>
+
 {#if session == null}
 	<Login {data} useDark={darkMode} />
 {:else}
