@@ -5,6 +5,10 @@
 	import { invalidateAll } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import '../app.css';
+	import { setContext } from 'svelte'; // import setContext
+	import en_US from 'stdf/lang/en_US'; // import language file
+
+	setContext('STDF_lang', en_US);
 
 	export let data;
 	let { supabase, session } = data;

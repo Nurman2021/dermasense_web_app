@@ -16,7 +16,7 @@ export default {
 				700: 'rgba(var(--theme-color-primary-700), <alpha-value>)',
 				800: 'rgba(var(--theme-color-primary-800), <alpha-value>)',
 				900: 'rgba(var(--theme-color-primary-900), <alpha-value>)',
-				950: 'rgba(var(--theme-color-primary-950), <alpha-value>)'
+				950: 'rgba(var(--theme-color-primary-950), <alpha-value>)',
 			},
 			dark: {
 				50: 'rgba(var(--theme-color-dark-50), <alpha-value>)',
@@ -29,7 +29,7 @@ export default {
 				700: 'rgba(var(--theme-color-dark-700), <alpha-value>)',
 				800: 'rgba(var(--theme-color-dark-800), <alpha-value>)',
 				900: 'rgba(var(--theme-color-dark-900), <alpha-value>)',
-				950: 'rgba(var(--theme-color-dark-950), <alpha-value>)'
+				950: 'rgba(var(--theme-color-dark-950), <alpha-value>)',
 			},
 			primaryBlack: 'rgba(var(--theme-color-primaryBlack), <alpha-value>)',
 			primaryWhite: 'rgba(var(--theme-color-primaryWhite), <alpha-value>)',
@@ -64,12 +64,18 @@ export default {
 				700: '#4D4D4D',
 				800: '#333333',
 				900: '#1A1A1A',
-				950: '#0D0D0D'
+				950: '#0D0D0D',
 			},
-			transparent: 'transparent'
+			transparent: 'transparent',
 		},
-		extend: {}
+		extend: {
+			// 自定义字体
+			// Custom Font
+			fontFamily: {
+				Trueno: 'Trueno',
+			},
+		},
 	},
 	darkMode: 'class',
-	plugins: []
+	plugins: [],
 };

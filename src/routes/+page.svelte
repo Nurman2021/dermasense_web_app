@@ -1,7 +1,10 @@
 <script>
 	import Swiper from '$lib/components/Swiper.svelte';
 	import Swiper2 from '$lib/components/Swiper2.svelte';
-	import { Divider, Icon } from 'stdf';
+	import { Divider, Icon, Calendar, Cell } from 'stdf';
+	import { setContext, getContext } from 'svelte';
+
+	let visible = false;
 </script>
 
 <svelte:head>
@@ -11,7 +14,9 @@
 <main class="mx-4 space-y-8">
 	<Swiper />
 
-	<div class="card-style my-5 flex flex-col justify-center rounded-xl bg-white dark:bg-gray-800 dark:text-white p-4">
+	<div
+		class="card-style my-5 flex flex-col justify-center rounded-xl bg-white p-4 dark:bg-gray-800 dark:text-white"
+	>
 		<div>
 			<h1 class="text-center text-2xl font-bold">Keunggulan Sabun Dermasense</h1>
 			<p class="text-center text-sm text-gray-600 dark:text-gray-300">
@@ -23,11 +28,15 @@
 					<h2 class="text-xl font-bold">
 						<span class="text-4xl">🌟</span><br /> Mencerahkan Kulit
 					</h2>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Mengurangi noda hitam dan kulit kusam</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">
+						Mengurangi noda hitam dan kulit kusam
+					</p>
 				</div>
 				<div>
 					<h2 class="text-xl font-bold"><span class="text-4xl">🌿</span><br /> Bahan Alami</h2>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Tanpa bahan kimia keras, aman untuk kulit sensitif</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">
+						Tanpa bahan kimia keras, aman untuk kulit sensitif
+					</p>
 				</div>
 				<div class="p-4">
 					<h2 class="text-xl font-bold">
@@ -37,7 +46,9 @@
 				</div>
 				<div class="p-4">
 					<h2 class="text-xl font-bold"><span class="text-4xl">☕</span> <br /> Aroma Relaksasi</h2>
-					<p class="text-sm text-gray-600 dark:text-gray-300">Memberikan Kesegaran dengan wangi kopi Alami</p>
+					<p class="text-sm text-gray-600 dark:text-gray-300">
+						Memberikan Kesegaran dengan wangi kopi Alami
+					</p>
 				</div>
 			</div>
 		</div>
@@ -45,7 +56,10 @@
 
 	<Swiper2 />
 
-	<div class="relative flex h-32 items-center overflow-hidden rounded-lg bg-gray-800">
+	<button
+		on:click={() => (visible = true)}
+		class="relative flex h-32 w-full items-center overflow-hidden rounded-lg bg-gray-800"
+	>
 		<!-- Background -->
 		<img
 			src="/images/makeup.jpg"
@@ -65,13 +79,18 @@
 				<Icon name="ri-checkbox-multiple-fill" size={24} />
 			</div>
 		</div>
+	</button>
+	<div class="z-20 dark:bg-primary-400">
+		<Calendar bind:visible />
 	</div>
 
-	<div class="card-style w-full rounded-xl bg-white dark:bg-gray-800 p-6 text-center">
+	<div class="card-style w-full rounded-xl bg-white p-6 text-center dark:bg-gray-800">
 		<!-- Header -->
 		<div class="mb-4">
 			<h1 class="text-pink-600 text-xl font-bold dark:text-white">DermaSense</h1>
-			<p class="text-gray-500 dark:text-gray-200">Made with <span class="text-red-500">❤️</span> by Sikobe</p>
+			<p class="text-gray-500 dark:text-gray-200">
+				Made with <span class="text-red-500">❤️</span> by Sikobe
+			</p>
 		</div>
 
 		<!-- Deskripsi -->
@@ -81,14 +100,16 @@
 
 		<!-- Copyright -->
 
-		<div class="mb-4 border-y border-gray-100 dark:border-gray-400 py-4 text-xs text-gray-400">
+		<div class="mb-4 border-y border-gray-100 py-4 text-xs text-gray-400 dark:border-gray-400">
 			Copyright © Enabled 2024. All Rights Reserved.
 		</div>
 
 		<!-- Link tambahan -->
 		<div class="space-x-4 text-xs text-gray-500">
 			<a href="/" class="hover:text-pink-600">Privacy Policy</a>
-			<a href="/" class="hover:text-pink-600 border-x border-gray-100 dark:border-gray-400 px-4">Terms and Conditions</a>
+			<a href="/" class="hover:text-pink-600 border-x border-gray-100 px-4 dark:border-gray-400"
+				>Terms and Conditions</a
+			>
 			<a href="/" class="hover:text-pink-600">Back to Top</a>
 		</div>
 	</div>
