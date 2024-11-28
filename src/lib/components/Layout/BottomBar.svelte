@@ -1,13 +1,14 @@
 <script>
 	import { TabBar } from 'stdf';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 
-	const labels4 = [
+	const labels = [
 		{
 			text: 'Home',
 			icon: { name: 'ri-home-3-line', size: 20 },
 			activeIcon: { name: 'ri-home-3-line', size: 20 },
-			path: '/'
+			path: '/home'
 		},
 		{
 			text: 'My Skin',
@@ -22,16 +23,18 @@
 			path: '/profile'
 		}
 	];
-
 	let active;
 
-	const tabBarChangeFun = (e) => {
-		active = e.detail;
-		console.log(active);
-		goto(labels4[active].path);
-	};
+	$: active = labels.findIndex((tab) => tab.path === $page.url.pathname);
+	$: active = active !== -1 ? active : 0;
+
+	function handleChange(e) {
+		const newIndex = e.detail;
+		active = newIndex;
+		goto(labels[newIndex].path);
+	}
 </script>
 
 <div class="nav-card fixed bottom-0 z-10 w-full">
-	<TabBar labels={labels4} on:change={tabBarChangeFun} line={true} injClass="dark:bg-[#090C00]" />
+	<TabBar {labels} {active} line={true} injClass="dark:!bg-[#090C00]" on:change={handleChange} />
 </div>

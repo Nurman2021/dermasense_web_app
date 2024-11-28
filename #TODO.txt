@@ -37,7 +37,7 @@
 
 #TODO-7
 1. fix nested layout page               :DONE (easy)
-2. add dialog espesialy for auth
+2. add dialog espesialy for auth        :DONE
 3. connect CALENDAR and REMINDER page   :DOME (timepicker)
 4. create user table on supabasse
 5. create reminder table on supabasse

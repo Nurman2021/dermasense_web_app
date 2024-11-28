@@ -1,7 +1,7 @@
 <script>
 	// @ts-ignore
 	import Login from '$lib/components/Login.svelte';
-	import { NavBar, Icon, Dialog } from 'stdf';
+	import { NavBar, Icon, Dialog, Toast } from 'stdf';
 	import { invalidateAll } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
@@ -16,7 +16,7 @@
 	$: ({ supabase, session } = data);
 
 	$: showLeft = !(
-		$page.url.pathname === '/' ||
+		$page.url.pathname === '/home' ||
 		$page.url.pathname === '/scanner' ||
 		$page.url.pathname === '/profile'
 	);
@@ -24,6 +24,8 @@
 	supabase.auth.onAuthStateChange(async (event, session) => {
 		if (event === 'SIGNED_IN') {
 			invalidateAll();
+			toastMessage = true;
+			toastMessage = false;
 		}
 
 		if (event === 'SIGNED_OUT') {
@@ -35,6 +37,7 @@
 
 	let darkMode = false;
 	let signOutDialog = false;
+	let toastMessage = false;
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
 
@@ -67,13 +70,14 @@
 	title="Logout"
 	content="Apakah kamu yakin ingin logout?"
 />
+<Toast bind:visible={toastMessage} type="success" message="Login Berhasil" />
 {#if session == null}
 	<Login {data} useDark={darkMode} />
 {:else}
 	<div class="nav-card sticky top-0 z-10 font-semibold capitalize dark:bg-darkBlack">
 		<NavBar
 			left={showLeft ? 'back' : 'none'}
-			title={$page.url.pathname === '/' ? 'dermasense' : $page.url.pathname.replace(/\//g, '')}
+			title={$page.url.pathname === '/home' ? 'dermasense' : $page.url.pathname.replace(/\//g, '')}
 			rightSlot
 			on:clickleft={() => window.history.back()}
 		>

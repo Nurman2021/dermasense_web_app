@@ -10,13 +10,9 @@
 	let { supabase, session } = data;
 	$: ({ supabase, session } = data);
 
-	console.log(supabase);
-	console.log(session);
 	$: if (session) {
-		goto('/');
+		goto('/home');
 	}
-
-	
 </script>
 
 {#if splash}
@@ -50,18 +46,21 @@
 	</div>
 {/if}
 
-<div class="min-h-screen p-6 bg-primaryWhite dark:bg-primaryBlack" style={splash ? 'display: none;' : 'display: block;'}>
-		<div class="flex flex-col mx-auto items-center space-y-8">
-			<h1 class="font-bold text-4xl dark:text-dark-300">SB</h1>
-			<p class="dark:text-darkWhite">Create an account or login for <strong>Dermasense</strong></p>
-			<!-- Supabase Auth UI -->
-			 <div class="w-full bg-white dark:bg-gray-800 px-8 py-4 rounded-xl shadow-xl">
-				 <Auth
-				 supabaseClient={supabase}
-				 theme={useDark ? 'dark' : 'light'}
-				 appearance={{ theme: ThemeSupa }}
-				 providers={['google']}
-				 />
-			</div>
+<div
+	class="min-h-screen bg-primaryWhite p-6 dark:bg-primaryBlack"
+	style={splash ? 'display: none;' : 'display: block;'}
+>
+	<div class="mx-auto flex flex-col items-center space-y-8">
+		<h1 class="text-4xl font-bold dark:text-dark-300">SB</h1>
+		<p class="dark:text-darkWhite">Create an account or login for <strong>Dermasense</strong></p>
+		<!-- Supabase Auth UI -->
+		<div class="w-full rounded-xl bg-white px-8 py-4 shadow-xl dark:bg-gray-800">
+			<Auth
+				supabaseClient={supabase}
+				theme={useDark ? 'dark' : 'light'}
+				appearance={{ theme: ThemeSupa }}
+				providers={['google']}
+			/>
+		</div>
 	</div>
 </div>
