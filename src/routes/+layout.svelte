@@ -1,7 +1,7 @@
 <script>
 	// @ts-ignore
 	import Login from '$lib/components/Login.svelte';
-	import { NavBar, Icon } from 'stdf';
+	import { NavBar, Icon, Dialog } from 'stdf';
 	import { invalidateAll } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
@@ -28,11 +28,13 @@
 
 		if (event === 'SIGNED_OUT') {
 			// await goto('login');
+			signOutDialog = false;
 			invalidateAll();
 		}
 	});
 
 	let darkMode = false;
+	let signOutDialog = false;
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
 
@@ -57,6 +59,14 @@
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 
+<Dialog
+	bind:visible={signOutDialog}
+	on:primary={async () => {
+		await supabase.auth.signOut();
+	}}
+	title="Logout"
+	content="Apakah kamu yakin ingin logout?"
+/>
 {#if session == null}
 	<Login {data} useDark={darkMode} />
 {:else}
@@ -68,12 +78,7 @@
 			on:clickleft={() => window.history.back()}
 		>
 			<div slot="right" class="m-2 space-x-3 text-center leading-8 dark:text-primary-100">
-				<button
-					class="ml-2"
-					on:click={async () => {
-						await supabase.auth.signOut();
-					}}>Logout</button
-				>
+				<button class="ml-2" on:click={() => (signOutDialog = true)}>Logout</button>
 				<button on:click={handleSwitchDarkMode}>
 					<Icon name={darkMode ? 'ri-moon-line' : 'ri-sun-line'} size={18} top={-2} />
 				</button>
