@@ -1,18 +1,16 @@
-#TODO
-1. pasang swiperjs untuk load code svelte: DONE
-2. gunakan swiper stdf untuk load gambar saja DONE
+#TODO-1
+1. pasang swiperjs untuk load code svelte       :DONE
+2. gunakan swiper stdf untuk load gambar saja   :DONE
 
 
 #TODO-2
-1. selesaikan content home min 3: DONE
-2. pasang theme light/dark
-3. tambahkan clerk auth (optional) :DONE => pindah ke supabasse
-
-
+1. selesaikan content home min 3    :DONE
+2. pasang theme light/dark          :DONE
+3. tambahkan clerk auth (optional)  :DONE => pindah ke supabasse
 
 #TODO-3
-1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home. DONE
-2. buat page utama splash DONE
+1. logic: jika tidak ada session maka arahkan ke tampilan splash/ jika ada ke home. :DONE
+2. buat page utama splash                                                           :DONE
 
 #TODO-4
 1. buat third party auth GOOGLE             :DONE
@@ -22,8 +20,6 @@
 5. integrated profile page                  :DONE
 6. design 3 product mockup                  :DONE
 
-
-
 #TODO-5 
 1. upload web ke VERCEL                             :DONE
 2, connect versel dengan DOMAIN                     :DONE
@@ -31,14 +27,23 @@
 5. generate qr code untuk urlnya                    :DONE
 6. tambahkan mockup sabun batangan pada design      :DONE
 
-
-#TODO-5
+#TODO-6
 1. publish GOOGLE OAUTH                             :DONE
 2. publish supabasse                                :DONE
-3. make reminder component for dermasense           :DONE
-4. add calendar COMPONENT dermasense                 
+3. make reminder component for dermasense           :DONE (use page instead)
+4. add calendar COMPONENT dermasense                :DONE
 5. add LOTION product to main page                  :DONE
 6. CATCH console.log using PUPPETEER or PLAYWRIGHT  :DONE (ganti url iframe)
 
+#TODO-7
+1. fix nested layout page               :DONE (easy)
+2. add dialog espesialy for auth
+3. connect CALENDAR and REMINDER page
+4. create user table on supabasse
+5. create reminder table on supabasse
+6. UPDATE UI on profile page
+7. UPDATE UI on scanner page
+8. UPDATE UI on REMINDER page
+9. cleaning beekman iframe 
 
-EUROPA FONT
+

@@ -1,6 +1,7 @@
 <script>
 	import Swiper from '$lib/components/Swiper.svelte';
 	import Swiper2 from '$lib/components/Swiper2.svelte';
+	import NavBottom from '$lib/components/Layout/BottomBar.svelte';
 	import { Divider, Icon, Calendar, Cell } from 'stdf';
 	import { setContext, getContext } from 'svelte';
 
@@ -115,6 +116,7 @@
 	</div>
 	<footer class="h-12">@Nurman Awaluddin Footer</footer>
 </main>
+<NavBottom />
 
 <style>
 </style>

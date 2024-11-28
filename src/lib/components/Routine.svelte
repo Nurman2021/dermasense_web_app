@@ -45,6 +45,7 @@
 	</div>
 
 	<!-- Daftar rutinitas harian -->
+	<!-- PAKAI BOTTOM SHEET stdf -->
 	<div class="routine-list">
 		<h2>Rutinitas Harian</h2>
 		{#if dailyRoutine.length > 0}
