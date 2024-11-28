@@ -38,12 +38,12 @@
 #TODO-7
 1. fix nested layout page               :DONE (easy)
 2. add dialog espesialy for auth
-3. connect CALENDAR and REMINDER page
+3. connect CALENDAR and REMINDER page   :DOME (timepicker)
 4. create user table on supabasse
 5. create reminder table on supabasse
 6. UPDATE UI on profile page
 7. UPDATE UI on scanner page
-8. UPDATE UI on REMINDER page
+8. UPDATE UI on REMINDER page           :DONE
 9. cleaning beekman iframe 
 
 
