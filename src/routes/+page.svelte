@@ -57,8 +57,8 @@
 
 	<Swiper2 />
 
-	<button
-		on:click={() => (visible = true)}
+	<a
+		href="/routine"
 		class="relative flex h-32 w-full items-center overflow-hidden rounded-lg bg-gray-800"
 	>
 		<!-- Background -->
@@ -80,10 +80,7 @@
 				<Icon name="ri-checkbox-multiple-fill" size={24} />
 			</div>
 		</div>
-	</button>
-	<div class="z-20 dark:bg-primary-400">
-		<Calendar bind:visible />
-	</div>
+	</a>
 
 	<div class="card-style w-full rounded-xl bg-white p-6 text-center dark:bg-gray-800">
 		<!-- Header -->

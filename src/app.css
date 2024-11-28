@@ -5,40 +5,40 @@
 
 @layer base {
 	:root {
-			/* Initial CSS variables */
-		--theme-color-primary-50: 253, 255, 245;
-		--theme-color-primary-100: 249, 255, 232;
-		--theme-color-primary-200: 209, 225, 169;
-		--theme-color-primary-300: 170, 195, 116;
-		--theme-color-primary-400: 133, 166, 72;
-		--theme-color-primary-500: 98, 136, 38;
-		--theme-color-primary: 67, 106, 13;
-		--theme-color-primary-700: 58, 99, 9;
-		--theme-color-primary-800: 50, 91, 6;
-		--theme-color-primary-900: 42, 84, 3;
-		--theme-color-primary-950: 34, 77, 0;
-		--theme-color-dark-50: 254, 255, 236;
-		--theme-color-dark-100: 253, 255, 232;
-		--theme-color-dark-200: 244, 246, 220;
-		--theme-color-dark-300: 234, 237, 209;
-		--theme-color-dark-400: 223, 229, 198;
-		--theme-color-dark-500: 213, 220, 187;
-		--theme-color-dark: 203, 211, 176;
-		--theme-color-dark-700: 160, 177, 111;
-		--theme-color-dark-800: 119, 144, 60;
-		--theme-color-dark-900: 81, 110, 23;
-		--theme-color-dark-950: 48, 77, 0;
-		--theme-color-primaryBlack: 15, 25, 1;
-		--theme-color-primaryWhite: 242, 243, 242;
-		--theme-color-darkBlack: 19, 25, 1;
-		--theme-color-darkWhite: 243, 243, 242;
-		--theme-color-functional-success: 205, 224, 66;
-		--theme-color-functional-warning: 230, 162, 60;
-		--theme-color-functional-error: 245, 108, 108;
-		--theme-color-functional-info: 76, 198, 200;
-		--theme-color-extend0: 131, 94, 29;
-		--theme-color-extend1: 158, 91, 64;
-		--theme-color-extend2: 128, 128, 0;
+				/* Initial CSS variables */
+		--theme-color-primary-50: 255, 246, 245;
+		--theme-color-primary-100: 255, 234, 232;
+		--theme-color-primary-200: 252, 199, 196;
+		--theme-color-primary-300: 248, 163, 162;
+		--theme-color-primary-400: 245, 128, 130;
+		--theme-color-primary-500: 241, 95, 102;
+		--theme-color-primary: 238, 63, 77;
+		--theme-color-primary-700: 198, 39, 58;
+		--theme-color-primary-800: 157, 21, 41;
+		--theme-color-primary-900: 117, 8, 28;
+		--theme-color-primary-950: 77, 0, 17;
+		--theme-color-dark-50: 254, 250, 255;
+		--theme-color-dark-100: 251, 232, 255;
+		--theme-color-dark-200: 246, 214, 255;
+		--theme-color-dark-300: 240, 196, 255;
+		--theme-color-dark-400: 233, 179, 255;
+		--theme-color-dark-500: 225, 161, 255;
+		--theme-color-dark: 216, 143, 255;
+		--theme-color-dark-700: 164, 88, 210;
+		--theme-color-dark-800: 116, 46, 166;
+		--theme-color-dark-900: 74, 17, 121;
+		--theme-color-dark-950: 40, 0, 77;
+		--theme-color-primaryBlack: 25, 1, 3;
+		--theme-color-primaryWhite: 243, 242, 242;
+		--theme-color-darkBlack: 16, 1, 25;
+		--theme-color-darkWhite: 242, 242, 243;
+		--theme-color-functional-success: 82, 196, 26;
+		--theme-color-functional-warning: 250, 173, 20;
+		--theme-color-functional-error: 255, 77, 79;
+		--theme-color-functional-info: 22, 119, 255;
+		--theme-color-extend0: 59, 89, 152;
+		--theme-color-extend1: 237, 28, 22;
+		--theme-color-extend2: 0, 104, 181;
 	}
 }
 

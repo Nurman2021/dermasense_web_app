@@ -1,30 +1,31 @@
 <script>
-	// let dailyRoutine = [
-	// 	{
-	// 		time: '08:00 AM - 09:00 AM',
-	// 		product: 'Sabun Eksfoliasi',
-	// 		type: 'Sabun',
-	// 		notes: 'Digunakan untuk mandi pagi',
-	// 		icon: '🛁'
-	// 	},
-	// 	{
-	// 		time: '10:00 AM - 10:15 AM',
-	// 		product: 'Lotion Minyak Esensial',
-	// 		type: 'Lotion',
-	// 		notes: 'Melembabkan kulit setelah mandi pagi',
-	// 		icon: '🧴'
-	// 	},
-	// 	{
-	// 		time: '08:00 PM - 09:00 PM',
-	// 		product: 'Sabun Aroma Terapi',
-	// 		type: 'Sabun',
-	// 		notes: 'Mandi malam untuk relaksasi',
-	// 		icon: '🌸'
-	// 	}
-	// ];
+	import { Button } from 'stdf';
+	let dailyRoutine = [
+		{
+			time: '08:00 AM - 09:00 AM',
+			product: 'Sabun Eksfoliasi',
+			type: 'Sabun',
+			notes: 'Digunakan untuk mandi pagi',
+			icon: '🛁'
+		},
+		{
+			time: '10:00 AM - 10:15 AM',
+			product: 'Lotion Minyak Esensial',
+			type: 'Lotion',
+			notes: 'Melembabkan kulit setelah mandi pagi',
+			icon: '🧴'
+		},
+		{
+			time: '08:00 PM - 09:00 PM',
+			product: 'Sabun Aroma Terapi',
+			type: 'Sabun',
+			notes: 'Mandi malam untuk relaksasi',
+			icon: '🌸'
+		}
+	];
 
 	let newRoutine = { time: '', product: '', type: '', notes: '' };
-	let dailyRoutine = []; // Data seperti sebelumnya
+	// let dailyRoutine = [];
 
 	function addRoutine() {
 		if (newRoutine.product && newRoutine.time) {
@@ -62,7 +63,7 @@
 		<button type="submit" class="bg-blue-500 rounded px-4 py-2 text-white">Tambah</button>
 	</form>
 </div>
-<div class="mx-auto mt-10 max-w-lg">
+<div class="card-style w-full rounded-xl bg-white p-6 text-center dark:bg-gray-800">
 	<!-- Header Rutinitas -->
 	<div class="routine-box bg-blue-500 p-4 text-white">
 		<h1 class="text-lg font-semibold">Rutinitas Sabun Harian</h1>
@@ -70,7 +71,15 @@
 	</div>
 
 	<!-- Daftar Rutinitas -->
-	<ul class="mt-4 rounded-md bg-white shadow-md">
+	<ul class="mt-4 rounded-xl bg-white shadow-md dark:bg-darkBlack">
+		<div class="grid grid-cols-6 grid-rows-1 items-center rounded-t-xl bg-primary p-3 dark:bg-dark">
+			<h2 class="col-span-4 text-left text-lg font-semibold text-white lg:col-span-5">
+				Your Reminder
+			</h2>
+			<div class="col-span-2 lg:col-auto">
+				<Button state="warning" radius="fulls">Tambah</Button>
+			</div>
+		</div>
 		{#each dailyRoutine as routine}
 			<li class="flex items-start border-b border-gray-200 p-4 last:border-none">
 				<!-- Waktu -->
