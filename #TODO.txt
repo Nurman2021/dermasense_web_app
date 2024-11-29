@@ -41,7 +41,7 @@
 3. connect CALENDAR and REMINDER page   :DOME (timepicker)
 4. create user table on supabasse
 5. create reminder table on supabasse
-6. UPDATE UI on profile page
+6. UPDATE UI on profile page            :DONE
 7. UPDATE UI on scanner page
 8. UPDATE UI on REMINDER page           :DONE
 9. cleaning beekman iframe 
