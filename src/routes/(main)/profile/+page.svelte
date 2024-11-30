@@ -14,7 +14,7 @@
 	<meta name="description" content="DermaSense" />
 </svelte:head>
 <main class="mx-4 space-y-8">
-	<div class="relative h-[80vh] rounded-lg bg-gray-900">
+	<div class="relative h-[60vh] rounded-lg bg-gray-900">
 		<!-- Background Blur -->
 		<div class="absolute inset-0 flex items-center justify-center">
 			<img
