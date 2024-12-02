@@ -47,3 +47,9 @@
 9. cleaning beekman iframe 
 
 
+THE CHALLENGE
+1. ketika iframe sudah di muat buat interval 5 detik
+2. setelah interval selesai tampilkan modal
+3. setele iframe keukuran normal
+
+

@@ -22,7 +22,7 @@
 			<img src="/images/face-light.png" alt="face scan" class="block dark:hidden" width="300" />
 			<div>
 				<h1 class="text-2xl font-bold">Scan Your Face First</h1>
-				<p class="text-sm font-light">Analisa kesehatan kulit akan tampil</p>
+				<p class="text-sm font-light">Klik <strong>GET STARTED</strong> untuk mulai analisa</p>
 			</div>
 		</a>
 
