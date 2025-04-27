@@ -28,7 +28,7 @@
 			class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 px-6 text-center"
 		>
 			<!-- Heading -->
-			<h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">Rahasia Kulit Glowing Alami</h1>
+			<h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">Rahasia Kulit Glowing & Cerah Alami</h1>
 
 			<!-- Subheading -->
 			<p class="mb-8 text-lg text-gray-200 md:text-xl">
